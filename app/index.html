@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Tracker — GTA 6 Trophy Guide</title>
+<meta name="description" content="Offline checklist and guide for all 55 GTA 6 PS5 trophies, with roadmap, missables and sources.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">★</span>
+    <div>
+      <h1>Leonida Trophy Tracker</h1>
+      <p class="tagline">All 55 GTA 6 PS5 trophies — checklist, roadmap &amp; missables. Works fully offline.</p>
+    </div>
+  </div>
+  <div class="progress-summary" id="progressSummary" aria-live="polite">
+    <div class="big-count"><span id="earnedCount">0</span><span class="of">/ 55</span></div>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="bar-fill" id="progressFill"></div></div>
+    <p class="bar-label" id="progressLabel">0% — the road to platinum starts here.</p>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Views">
+  <button class="tab active" data-view="checklist" role="tab" aria-selected="true">Checklist</button>
+  <button class="tab" data-view="roadmap" role="tab" aria-selected="false">Roadmap</button>
+  <button class="tab" data-view="missables" role="tab" aria-selected="false">Missables</button>
+  <button class="tab" data-view="sources" role="tab" aria-selected="false">Sources</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view active" role="tabpanel" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="field search-field">Search
+        <input type="search" id="searchInput" placeholder="Search name or description…" autocomplete="off">
+      </label>
+      <label class="field">Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="platinum">Platinum</option>
+          <option value="story">Story</option>
+          <option value="side">Side</option>
+          <option value="hidden">Hidden</option>
+          <option value="activities">Activities</option>
+          <option value="heists">Heists</option>
+          <option value="vehicles">Vehicles</option>
+        </select>
+      </label>
+      <label class="field">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check-field"><input type="checkbox" id="hideEarned"> Hide earned</label>
+      <label class="check-field spoiler-field"><input type="checkbox" id="spoilerToggle"> Show spoilers</label>
+      <div class="io-buttons">
+        <button id="exportBtn" type="button">Export progress</button>
+        <button id="importBtn" type="button">Import progress</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <button id="resetBtn" type="button" class="danger">Reset</button>
+      </div>
+    </div>
+
+    <div class="counters" id="counters" aria-label="Progress by grade and kind"></div>
+
+    <p class="results-line" id="resultsLine"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Try clearing the search or a filter.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" role="tabpanel" aria-label="Roadmap to platinum" hidden>
+    <h2>Road to Platinum — about 200 hours</h2>
+    <p class="lede">One playthrough, done in the right order. The platinum is simply all 54 other trophies, so the plan below is the plan for everything.</p>
+    <ol class="roadmap-steps">
+      <li>
+        <h3>Play the story, save at every chapter</h3>
+        <p>Chapters 1–4 and the final mission unlock 12 story trophies on their own. Before you start each chapter, make a <strong>manual save in a fresh slot</strong> — there is no mission replay, and that save is your only safety net if you miss something.</p>
+      </li>
+      <li>
+        <h3>Chapter 1 — do the balcony meditation now</h3>
+        <p>Meditate with Lucia on the Chapter 1 balcony before the chapter ends. It is one of the 18 meditation spots for <strong>Positive Mental Attitude</strong>, and it disappears after Chapter 1. This is the one trophy you can truly lock yourself out of.</p>
+      </li>
+      <li>
+        <h3>Chapter 2 — open the money systems</h3>
+        <p>Finish <em>Daily Driver</em> to unlock garage purchases in the Vice City Real Estate app (8 garages, ~$160,000 for <strong>Little Boxes</strong>). Finish <em>Moses</em> to open the Scooter Bros app and start registering cars for <strong>On the Spot</strong>. Start the Kingpin Bowling illegal operation with Sticky Bombs for <strong>Let's Go Bowling</strong>.</p>
+      </li>
+      <li>
+        <h3>Chapter 3 — jewel jobs and the timed race</h3>
+        <p><em>Yasmani's Jewelry Jobs</em> gives you the Snap Gun for a clean, undetected store robbery (<strong>Sneakthief</strong>). In Yago's stranger strand, one race is time-sensitive and marked with an hourglass — save first, then race.</p>
+      </li>
+      <li>
+        <h3>Chapter 4 — bank vaults</h3>
+        <p>The optional mission <em>That's Where The Money Is</em> opens bank vaults. Rob 5 and escape for <strong>Maximum Withdrawal</strong>, and all 8 for full completion. Vault jobs hand you four stars immediately, which also sets up <strong>Hot Together</strong> — lose the heat with your partner beside you.</p>
+      </li>
+      <li>
+        <h3>After the story — stranger strands</h3>
+        <p>Finish 8 stranger strands for <strong>Strangers &amp; Freaks</strong> (Andy's, Billy's and Tyrone's strands do not count — they have their own trophies). The Kenton, Billy, Andy, Randy and Tyrone finales stay open after the story, so there is no deadline pressure here.</p>
+      </li>
+      <li>
+        <h3>The long grind — collectibles &amp; counts</h3>
+        <p>250 stunts, 100 WAiNK locations, 100 vehicles discovered, 39 illegal operations, 3 card sets, 14 drone-race locations, 50 challenges, 20 race wins, gold medals in all 42 shooting-range challenges. These are the bulk of the ~200 hours — chip away at them between story beats instead of leaving them all for the end.</p>
+      </li>
+      <li>
+        <h3>The 100% push</h3>
+        <p>Open Progress → Stats → 100% Completion after the story and clear what remains: 300 stunts, 200 of 277 vehicles, all 8 vaults, all 39 operations, 70 of 80 challenges. <strong>A Long Road</strong> pops at 100%.</p>
+      </li>
+    </ol>
+    <aside class="tip-box">
+      <h3>Chapter-save advice</h3>
+      <p>Keep one manual save per chapter start, in separate slots, and never overwrite them until the platinum pops. If a missable slips past you, that save is the difference between replaying one chapter and replaying the whole game.</p>
+    </aside>
+  </section>
+
+  <section id="view-missables" class="view" role="tabpanel" aria-label="Missable trophies" hidden>
+    <h2>Missables — what can actually go wrong</h2>
+    <p class="lede">Almost everything in GTA 6 can be cleaned up after the story. Only one trophy is truly missable, plus one time-sensitive step worth knowing about.</p>
+    <div id="missableList"></div>
+    <h3>Time-sensitive, not missable</h3>
+    <ul class="plain-list">
+      <li><strong>Strangers &amp; Freaks</strong> — one race in Yago's stranger strand is timed (hourglass icon). Save before it; failing it does not end the strand, but the window is real.</li>
+      <li><strong>Stranger finales</strong> (Kenton, Billy, Andy, Randy, Tyrone) — all stay open after the story ends, so they cannot be missed.</li>
+    </ul>
+  </section>
+
+  <section id="view-sources" class="view" role="tabpanel" aria-label="Sources" hidden>
+    <h2>Sources &amp; confidence</h2>
+    <ul class="plain-list">
+      <li><strong>Official trophy list</strong> — trophy names, descriptions and grades as published on <a href="https://www.exophase.com" rel="noopener">Exophase</a> and <a href="https://psnprofiles.com" rel="noopener">PSNProfiles</a>. 55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 27 visible, 28 hidden.</li>
+      <li><strong>Guide notes</strong> — built from the official descriptions plus GamesRadar+ and PowerPyx reporting on the trophy list (18 Nov 2026).</li>
+      <li><strong>Reported, not confirmed</strong> — anything the game itself has not yet shown in play is marked as reported, not confirmed, in the trophy detail. That includes the riddle-style hidden trophies and the UFO encounter. Treat those notes as the best current reporting, not as verified in-game fact.</li>
+    </ul>
+    <p class="disclaimer">This is an unofficial fan-made tracker. It is not affiliated with Rockstar Games or Take-Two Interactive, and it contains no Rockstar artwork, logos or game assets. GTA 6 trophy data is reproduced from the published official list for guide purposes.</p>
+  </section>
+</main>
+
+<aside class="detail-pane" id="detailPane" aria-label="Trophy detail" hidden>
+  <button class="detail-close" id="detailClose" type="button" aria-label="Close detail">✕</button>
+  <div id="detailBody"></div>
+</aside>
+
+<footer>
+  <p>Leonida Trophy Tracker — unofficial fan-made guide. No Rockstar artwork or assets. Data: official trophy list via Exophase &amp; PSNProfiles; guide notes via GamesRadar+ / PowerPyx reporting. Works offline — no network requests.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
